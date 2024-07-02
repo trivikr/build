@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "index-generator": "node --trace-warnings index-generator.js"
+    "format": "biome format --write src",
+    "index-generator": "node --trace-warnings src/index.js"
   },
   "author": "Ash <email@ashleycripps.co.uk>",
   "contributors": [
