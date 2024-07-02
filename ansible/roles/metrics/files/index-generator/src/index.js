@@ -6,7 +6,7 @@ const app = express();
 app.use(json());
 
 async function getFileList() {
-	let fileList = [];
+	const fileList = [];
 
 	const [files] = await storage
 		.bucket("access-logs-summaries-nodejs")
@@ -28,13 +28,13 @@ async function generateIndex() {
 	let body = "";
 
 	for (file of fileList) {
-		let bodyString =
-			'<p> <a href="' + baseURL.concat(file) + '"> ' + file + " </a></p>\n";
+		const bodyString =
+			`<p>·<a·href="${baseURL.concat(file)}">·${file}·</a></p>\n`;
 		body += bodyString;
 	}
 
 	const fileContents =
-		"<html>\n<head>\n</head>\n<body>\n" + body + "</body>\n</html>";
+		`<html>\n<head>\n</head>\n<body>\n${body}</body>\n</html>`;
 	const fileName = "index.html";
 	try {
 		await storage
@@ -48,7 +48,7 @@ async function generateIndex() {
 }
 
 app.post("/", async (req, res) => {
-	if (req.body.message.attributes.objectId != "index.html") {
+	if (req.body.message.attributes.objectId !== "index.html") {
 		await generateIndex();
 	}
 	res.status(200).send();

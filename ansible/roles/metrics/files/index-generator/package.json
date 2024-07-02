@@ -5,9 +5,10 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "format": "biome format --write src",
-    "index-generator": "node --trace-warnings src/index.js"
+    "index-generator": "node --trace-warnings src/index.js",
+    "lint": "biome lint --write src",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ash <email@ashleycripps.co.uk>",
   "contributors": [
