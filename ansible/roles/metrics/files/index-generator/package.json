@@ -9,10 +9,15 @@
     "index-generator": "node --trace-warnings index-generator.js"
   },
   "author": "Ash <email@ashleycripps.co.uk>",
-  "contributors": [ "Kamat, Trivikram <trivikr.dev@gmail.com>" ],
+  "contributors": [
+    "Kamat, Trivikram <trivikr.dev@gmail.com>"
+  ],
   "license": "Apache-2.0",
   "dependencies": {
     "@google-cloud/storage": "^7.11.2",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3"
   }
 }
