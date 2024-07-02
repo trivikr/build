@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "format": "biome format --write src",
-    "index-generator": "node --trace-warnings src/index.js",
+    "generate:index": "node --trace-warnings src/index.js",
     "lint": "biome lint --write src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

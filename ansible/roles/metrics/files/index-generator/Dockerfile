@@ -7,4 +7,4 @@ COPY src ./src
 
 RUN npm install --omit=dev
 
-CMD ["npm", "run", "index-generator"]
+CMD ["npm", "run", "generate:index"]
