@@ -2,11 +2,11 @@
   "name": "index-generator",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
     "format": "biome format --write src",
-    "generate:index": "node --trace-warnings src/index.js",
+    "generate:index": "node --trace-warnings src/app.js",
     "lint": "biome lint --write src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
