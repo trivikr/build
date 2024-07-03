@@ -7,8 +7,7 @@
   "scripts": {
     "format": "biome format --write src",
     "generate:index": "node --trace-warnings src/app.js",
-    "lint": "biome lint --write src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "biome lint --write src"
   },
   "author": "Ash <email@ashleycripps.co.uk>",
   "contributors": [
