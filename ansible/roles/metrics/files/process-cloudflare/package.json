@@ -2,15 +2,17 @@
   "name": "process-cloudflare",
   "version": "1.0.0",
   "description": "",
-  "main": "process-cloudflare.js",
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "processLogs": "node --trace-warnings process-cloudflare.js"
+    "format": "biome format --write src",
+    "process:logs": "node --trace-warnings src/app.js",
+    "lint": "biome lint --write src"
   },
   "author": "Rod <rod@vagg.org> (http://r.va.gg/)",
   "contributors": [
-    "Ash <email@ashleycripps.co.uk>"
+    "Ash <email@ashleycripps.co.uk>",
+    "Kamat, Trivikram <trivikr.dev@gmail.com>"
   ],
   "license": "Apache-2.0",
   "dependencies": {
@@ -18,6 +20,6 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "eslint": "^7.8.1"
+    "@biomejs/biome": "1.8.3"
   }
 }
