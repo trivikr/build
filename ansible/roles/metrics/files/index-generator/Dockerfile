@@ -2,10 +2,9 @@ FROM node:20-slim
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package.json ./
+COPY src ./src
 
-RUN npm install
+RUN npm install --omit=dev
 
-COPY . ./
-
-CMD ["npm", "run", "index-generator"]
+CMD ["npm", "run", "generate:index"]

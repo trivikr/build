@@ -2,19 +2,23 @@
   "name": "index-generator",
   "version": "1.0.0",
   "description": "",
-  "main": "index-generator.js",
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "index-generator": "node --trace-warnings index-generator.js"
+    "format": "biome format --write src",
+    "generate:index": "node --trace-warnings src/app.js",
+    "lint": "biome lint --write src"
   },
   "author": "Ash <email@ashleycripps.co.uk>",
+  "contributors": [
+    "Kamat, Trivikram <trivikr.dev@gmail.com>"
+  ],
   "license": "Apache-2.0",
   "dependencies": {
     "@google-cloud/storage": "^7.11.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "eslint": "^7.8.1"
+    "@biomejs/biome": "1.8.3"
   }
 }
