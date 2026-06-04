@@ -220,6 +220,20 @@ then it is probably appropriate to clean out part of the worker's
 workspace (where Jenkins jobs are performed). To clean out part of the
 workspace, run `rm -rf ~/build/workspace/node-test-commit*`.
 
+For matrix jobs that run concurrently, avoid sharing a single checkout
+directory between builds. A stale `.git/index.lock` during checkout usually
+means that two Git operations touched the same workspace, or that an earlier
+Git operation was killed while updating the index. Configure the job to use a
+custom workspace that includes the job, build number, and matrix axis, for
+example:
+
+```text
+/home/iojs/build/workspace/node-${JOB_NAME}-${BUILD_NUMBER}-${nodes}
+```
+
+Only remove `.git/index.lock` manually after checking that no Git process is
+still running in that workspace.
+
 #### AIX Space Issues
 
 The AIX machines are often under provisoned in terms of how much diskspace they have.
